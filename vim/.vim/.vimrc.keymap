@@ -1,0 +1,15 @@
+" Ctrl-J 替换Esc
+imap <C-j> <Esc>
+map <C-j> <Esc>
+
+" 方向键替换
+noremap h i
+noremap i k
+noremap j h
+noremap k j
+noremap <S-j> <S-h>
+noremap <S-h> <S-i>
+
+" 保存&退出
+map Q :q<CR>
+map S :w<CR>
