@@ -8,9 +8,6 @@ Bundle 'gmarik/vundle'
 " Define bundles via Github repos
 " 标签导航
 Bundle 'majutsushi/tagbar'
-Bundle 'vim-scripts/ctags.vim'
-" 静态代码分析
-Bundle 'scrooloose/syntastic'
 " 文件搜索
 Bundle 'kien/ctrlp.vim'
 Bundle 'junegunn/fzf.vim'
@@ -24,13 +21,10 @@ Bundle "railscasts"
 Bundle "Railscasts-Theme-GUIand256color"
 " python自动补全
 Bundle 'davidhalter/jedi-vim'
-" Bundle "klen/python-mode"
 " 括号匹配高亮
 Bundle 'kien/rainbow_parentheses.vim'
 " 可视化缩进
 Bundle 'nathanaelkane/vim-indent-guides'
-" 代码折叠
-Bundle 'SimpylFold'
 
 " Editor Enhancement
 Bundle 'jiangmiao/auto-pairs'
@@ -44,28 +38,29 @@ Bundle 'tpope/vim-capslock'
 Bundle 'easymotion/vim-easymotion'
 
 " tagbar标签导航
-nmap <Leader>tb :TagbarToggle<CR>
-let g:tagbar_ctags_bin='/usr/bin/ctags'
-let g:tagbar_width=30
-autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx,*.py call tagbar#autoopen()
-let g:jedi#auto_initialization = 1
+nmap <F8> :TagbarToggle<CR>
+"let g:tagbar_ctags_bin='/usr/bin/ctags'
+"let g:tagbar_width=30
+"autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx,*.py call tagbar#autoopen()
+"let g:jedi#auto_initialization = 1
 
 " 主题 solarized
 let g:solarized_termtrans=1
+let g:solarized_termcolor=256
 let g:solarized_contrast="normal"
 let g:solarized_visibility="normal"
 " " 配色方案
 set background=dark
 " colorscheme solarized
+" colorscheme railscasts
 
 " 目录文件导航NERD-Tree
-" " \nt 打开nerdree窗口，在左侧栏显示
-nmap <leader>nt :NERDTree<CR>
+" F3 打开\关闭nerdree窗口，在左侧栏显示
+nmap <F3> :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$' ]
-let g:netrw_home='~/bak'
 "close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | end
   
 " 括号匹配高亮
 let g:rbpt_colorpairs = [
@@ -90,7 +85,7 @@ let g:rbpt_max = 40
 let g:rbpt_loadcmd_toggle = 0
 
 " 可视化缩进
-let g:indent_guides_enable_on_vim_startup = 0  " 默认关闭
+let g:indent_guides_enable_on_vim_startup = 1  " 默认关闭
 let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
 let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
 
