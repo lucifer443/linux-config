@@ -15,8 +15,11 @@ set fenc=utf-8             "编码
 set mouse=a                "启用鼠标
 set hlsearch               "搜索高亮
 set autoindent             "自动缩进，每行缩进值与上行相等
+set foldmethod=indent      "代码折叠设置
+set foldlevel=99
 
 set expandtab              "空格替换tab
+set softtabstop=4
 set shiftwidth=4
 set tabstop=4              
 
@@ -24,7 +27,7 @@ syntax on                  "语法高亮
 
 filetype off               "required
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 if filereadable(expand("~/.vim/.vimrc.bundles"))
