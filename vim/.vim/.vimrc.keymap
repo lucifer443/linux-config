@@ -1,12 +1,20 @@
 " Ctrl-J 替换Esc
-imap <C-j> <Esc>
-map <C-j> <Esc>
+imap <C-h> <Esc>
+map <C-h> <Esc>
 
 " 方向键替换
 noremap h i
 noremap i k
 noremap j h
 noremap k j
+inoremap <C-j> <left>
+inoremap <C-l> <right>
+inoremap <C-i> <up>
+inoremap <C-k> <down>
+map <C-j> <C-w>h
+map <C-l> <C-w>l
+map <C-i> <C-w>k
+map <C-k> <C-w>j
 noremap <S-j> <S-h>
 noremap <S-h> <S-i>
 
