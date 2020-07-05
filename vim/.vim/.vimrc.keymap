@@ -1,6 +1,6 @@
 " Ctrl-J 替换Esc
-imap <C-h> <Esc>
-map <C-h> <Esc>
+imap <C-o> <Esc>
+map <C-o> <Esc>
 
 " 方向键替换
 noremap h i
