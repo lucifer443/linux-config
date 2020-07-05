@@ -50,7 +50,7 @@ let g:solarized_termcolor=256
 " " 配色方案
 set background=dark
 " colorscheme solarized
-" colorscheme railscasts
+colorscheme railscasts
 
 " 目录文件导航NERD-Tree
 " F3 打开\关闭nerdree窗口，在左侧栏显示
