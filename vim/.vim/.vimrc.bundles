@@ -16,9 +16,7 @@ Bundle "scrooloose/nerdtree"
 " 美化状态栏
 Bundle "bling/vim-airline"
 " 主题风格
-Bundle "altercation/vim-colors-solarized"
-Bundle "railscasts"
-Bundle "Railscasts-Theme-GUIand256color"
+Bundle "jpo/vim-railscasts-theme"
 " python自动补全
 Bundle 'davidhalter/jedi-vim'
 " 括号匹配高亮
@@ -44,12 +42,9 @@ let g:tagbar_width=30
 "autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx,*.py call tagbar#autoopen()
 "let g:jedi#auto_initialization = 1
 
-" 主题 solarized
-let g:solarized_termtrans=1
-let g:solarized_termcolor=256
-" " 配色方案
+" 配色方案
 set background=dark
-" colorscheme solarized
+set t_Co=256
 colorscheme railscasts
 
 " 目录文件导航NERD-Tree
